@@ -1,5 +1,8 @@
 package com.upb.snowden.impln.models;
 
+
+
+//class for training data
 public class Fact {
 
     private String id;

@@ -9,6 +9,7 @@ public class InputParse {
 
     public static List<Triplet> getAllTriplets() {
         //generate all Triplets
+    	//make this global variable List<Triplet> list 
         List<Triplet> list = new ArrayList<>();
         System.out.println("Noch nicht entwickelt");
         return null;

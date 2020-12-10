@@ -14,8 +14,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class WikiParseUtils {
 
+// move this file to util package
+//comments: what about wiki text??? if you dont find the information in infobox
+public class WikiParseUtils {
+	
+	//get wiki's infobox
     public static String getInfobox(Document document, boolean asText) {
         String infobox = "";
         Element body = document.body();
@@ -30,6 +34,7 @@ public class WikiParseUtils {
         return infobox;
     }
 
+    //construction of URLs
     public static List<String> getAlternativeUrls(String subject) {
         subject = subject.replaceAll(" ","%20");
         List<String> list = new ArrayList<>();

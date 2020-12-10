@@ -1,15 +1,14 @@
 package com.upb.snowden.impln.utils;
 
-import com.upb.snowden.impln.Constants;
 import com.upb.snowden.impln.models.Fact;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class FileOperation {
 
+	// add this to constants.java
     public static String URI_FACT = "http://swc2017.aksw.org/task2/dataset/";
     public static String URI_TRUTH_VAL = "<http://swc2017.aksw.org/hasTruthValue>";
     public static String DATA_TYPE = "<http://www.w3.org/2001/XMLSchema#double>";

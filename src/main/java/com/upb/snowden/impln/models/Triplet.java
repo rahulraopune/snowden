@@ -1,5 +1,8 @@
 package com.upb.snowden.impln.models;
 
+
+// why do you need two similar classes triplet and fact???
+//class used for extraction of triplet
 public class Triplet {
 
     private String subject;

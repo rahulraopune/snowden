@@ -8,6 +8,7 @@ import java.io.IOException;
 
 public class NetworkUtils {
 
+	// add this to constants.java file
     public static final String BASE_URL = "https://en.wikipedia.org/wiki/";
 
     public static Document getResponse(String url) {
