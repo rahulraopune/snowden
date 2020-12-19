@@ -24,4 +24,12 @@ public class Fact {
         return value;
     }
 
+    @Override
+    public String toString() {
+        return "Fact{" +
+                "id='" + id + '\'' +
+                ", fact='" + fact + '\'' +
+                ", value=" + value +
+                '}';
+    }
 }

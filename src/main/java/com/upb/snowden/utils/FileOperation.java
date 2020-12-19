@@ -10,9 +10,6 @@ import static com.upb.snowden.Constants.*;
 
 public class FileOperation {
 
-    // add this to constants.java
-
-
     public static List<Fact> readFile(String path) {
         String contents = "";
         List<Fact> list = new ArrayList<>();

@@ -31,6 +31,12 @@ public class WikiParseUtils {
         return infobox;
     }
 
+    //get wiki's infobox
+    public static String getWebpage(Document document, boolean asText) {
+        Element body = document.body();
+        return asText ? body.text() : body.html();
+    }
+
     //construction of URLs
     public static List<String> getAlternativeUrls(String subject) {
         subject = subject.replaceAll(" ","%20");
