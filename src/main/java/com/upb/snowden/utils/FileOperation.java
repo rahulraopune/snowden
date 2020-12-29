@@ -10,7 +10,7 @@ import static com.upb.snowden.Constants.*;
 
 public class FileOperation {
 
-    public static List<Fact> readFile(String path) {
+    public static List<Fact> readTrainFile(String path) {
         String contents = "";
         List<Fact> list = new ArrayList<>();
         try {
@@ -23,6 +23,28 @@ public class FileOperation {
                     String id_fact = line_splits[0];
                     String sent = line_splits[1];
                     double value = Double.parseDouble(line_splits[2]);
+                    list.add(new Fact(id_fact,sent,value));
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    public static List<Fact> readTestFile(String path) {
+        String contents = "";
+        List<Fact> list = new ArrayList<>();
+        try {
+            File f = new File(path);
+            if (f.exists()) {
+                BufferedReader br = new BufferedReader(new FileReader(f));
+                br.readLine(); //ignore first line
+                while ((contents = br.readLine()) != null) {
+                    String[] line_splits = contents.split("\t");
+                    String id_fact = line_splits[0];
+                    String sent = line_splits[1];
+                    double value = 0.0;
                     list.add(new Fact(id_fact,sent,value));
                 }
             }

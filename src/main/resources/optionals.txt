@@ -1,0 +1,108 @@
+/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=59085:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/rahul/Documents/Snowden/Snowden/target/classes:/Users/rahul/.m2/repository/com/apple/AppleJavaExtensions/1.4/AppleJavaExtensions-1.4.jar:/Users/rahul/.m2/repository/de/jollyday/jollyday/0.4.9/jollyday-0.4.9.jar:/Users/rahul/.m2/repository/org/apache/commons/commons-lang3/3.3.1/commons-lang3-3.3.1.jar:/Users/rahul/.m2/repository/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar:/Users/rahul/.m2/repository/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.jar:/Users/rahul/.m2/repository/xerces/xercesImpl/2.8.0/xercesImpl-2.8.0.jar:/Users/rahul/.m2/repository/xalan/xalan/2.7.0/xalan-2.7.0.jar:/Users/rahul/.m2/repository/org/glassfish/javax.json/1.0.4/javax.json-1.0.4.jar:/Users/rahul/.m2/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar:/Users/rahul/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/Users/rahul/.m2/repository/javax/xml/bind/jaxb-api/2.4.0-b180830.0359/jaxb-api-2.4.0-b180830.0359.jar:/Users/rahul/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-core-2.3.0.1.jar:/Users/rahul/.m2/repository/com/sun/xml/bind/jaxb-impl/2.4.0-b180830.0438/jaxb-impl-2.4.0-b180830.0438.jar:/Users/rahul/.m2/repository/org/json/json/20201115/json-20201115.jar:/Users/rahul/.m2/repository/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar:/Users/rahul/.m2/repository/org/jsoup/jsoup/1.13.1/jsoup-1.13.1.jar:/Users/rahul/.m2/repository/edu/stanford/nlp/stanford-corenlp/3.9.2/stanford-corenlp-3.9.2.jar:/Users/rahul/.m2/repository/org/apache/lucene/lucene-queryparser/4.10.3/lucene-queryparser-4.10.3.jar:/Users/rahul/.m2/repository/org/apache/lucene/lucene-sandbox/4.10.3/lucene-sandbox-4.10.3.jar:/Users/rahul/.m2/repository/org/apache/lucene/lucene-analyzers-common/4.10.3/lucene-analyzers-common-4.10.3.jar:/Users/rahul/.m2/repository/org/apache/lucene/lucene-queries/4.10.3/lucene-queries-4.10.3.jar:/Users/rahul/.m2/repository/org/apache/lucene/lucene-core/4.10.3/lucene-core-4.10.3.jar:/Users/rahul/.m2/repository/com/io7m/xom/xom/1.2.10/xom-1.2.10.jar:/Users/rahul/.m2/repository/joda-time/joda-time/2.9.4/joda-time-2.9.4.jar:/Users/rahul/.m2/repository/com/googlecode/efficient-java-matrix-library/ejml/0.23/ejml-0.23.jar:/Users/rahul/.m2/repository/com/google/protobuf/protobuf-java/3.2.0/protobuf-java-3.2.0.jar:/Users/rahul/.m2/repository/edu/stanford/nlp/stanford-corenlp/3.9.2/stanford-corenlp-3.9.2-models-english.jar com.upb.snowden.Main
+Los Angeles Clippers is Mike Miller (basketball player)'s team.
+Triplet{subject='', predicate='', object=''}
+
+Ancona is Eduard von Böhm-Ermolli's birth place.
+Triplet{subject='', predicate='', object=''}
+
+Minneapolis is Prince (musician)'s spouse.
+Triplet{subject='', predicate='', object=''}
+
+Menlo Park, California is IntelliCorp (software)'s spouse.
+Triplet{subject='', predicate='', object=''}
+
+Virginia DeMarce is 1634: The Ram Rebellion's author.
+Triplet{subject='', predicate='', object=''}
+
+Catherine Crook de Camp is Footprints on Sand's author.
+Triplet{subject='', predicate='', object=''}
+
+Ayn Rand is Anthem (novella)'s author.
+Triplet{subject='', predicate='', object=''}
+
+Kiel is Johan Christian Fabricius' death place.
+Triplet{subject='', predicate='', object=''}
+
+Stephen King is Summon the Thunder's author.
+Triplet{subject='', predicate='', object=''}
+
+Bill Duke is Predator (film)'s spouse.
+Triplet{subject='', predicate='', object=''}
+
+Budapest is John von Neumann's birth place.
+Triplet{subject='', predicate='', object=''}
+
+Budapest is John von Neumann's death place.
+Triplet{subject='', predicate='', object=''}
+
+Brussels is Albert VII, Archduke of Austria's birth place.
+Triplet{subject='', predicate='', object=''}
+
+Florence is Francis II, Holy Roman Emperor's death place.
+Triplet{subject='', predicate='', object=''}
+
+Kawasaki, Kanagawa is Financial Navigator's foundation place.
+Triplet{subject='', predicate='', object=''}
+
+St Albans is Otis Redding's death place.
+Triplet{subject='', predicate='', object=''}
+
+Stephen Baxter is Time's Eye (novel)'s author.
+Triplet{subject='', predicate='', object=''}
+
+Edward Bulwer-Lytton, 1st Baron Lytton is First Landing's author.
+Triplet{subject='', predicate='', object=''}
+
+Frank Herbert is An Unusual Angle's author.
+Triplet{subject='', predicate='', object=''}
+
+Opava is Eduard von Böhm-Ermolli's death place.
+Triplet{subject='', predicate='', object=''}
+
+Bill Ransom is The Jesus Incident's author.
+Triplet{subject='', predicate='', object=''}
+
+Belfast is Financial Navigator's foundation place.
+Triplet{subject='', predicate='', object=''}
+
+Philadelphia 76ers is Elton Brand's author.
+Triplet{subject='', predicate='', object=''}
+
+Thomas Thurston Thomas is Flare (science fiction novel)'s author.
+Triplet{subject='', predicate='', object=''}
+
+Chiwetel Ejiofor is 2012 (film)'s author.
+Triplet{subject='', predicate='', object=''}
+
+Tanith Lee is Dreams of Dark and Light: The Great Short Fiction of Tanith Lee's author.
+Triplet{subject='', predicate='', object=''}
+
+Olaf Stapledon is Sirius (novel)'s author.
+Triplet{subject='', predicate='', object=''}
+
+Florence is Francis II, Holy Roman Emperor's birth place.
+Triplet{subject='', predicate='', object=''}
+
+Madison, Alabama is Danger (company)'s foundation place.
+Triplet{subject='', predicate='', object=''}
+
+Tanith Lee is Dreams of Dark and Light: The Great Short Fiction of Tanith Lee's foundation place.
+Triplet{subject='', predicate='', object=''}
+
+Ancona is Eduard von Böhm-Ermolli's death place.
+Triplet{subject='', predicate='', object=''}
+
+Kiel is Johan Christian Fabricius' subsidiary.
+Triplet{subject='', predicate='subsidiary', object='Kiel is Johan Christian Fabricius'}
+
+Dayton Ward is Summon the Thunder's author.
+Triplet{subject='', predicate='', object=''}
+
+Karen Elson is Jack White (musician)'s spouse.
+Triplet{subject='', predicate='', object=''}
+
+Melbourne is Ferdinand von Mueller's death place.
+Triplet{subject='', predicate='', object=''}
+
+
+Process finished with exit code 0

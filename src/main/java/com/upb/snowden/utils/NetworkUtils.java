@@ -3,8 +3,14 @@ package com.upb.snowden.utils;
 import org.jsoup.Connection.Response;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Consumer;
 
 import static com.upb.snowden.Constants.BASE_URL;
 
@@ -30,6 +36,7 @@ public class NetworkUtils {
 
     public static Document getResponseForSubject(String subject) {
         String url = BASE_URL+ subject;
+        //System.out.println(url);
         return getResponse(url);
     }
 }
