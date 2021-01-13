@@ -1,5 +1,6 @@
 package com.upb.snowden.utils;
 
+import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Connection.Response;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -26,7 +27,7 @@ public class NetworkUtils {
                 String body = res.body();
                 document = Jsoup.parseBodyFragment(body);
             }  else {
-                System.out.println(url+" not working");
+                Logger.log(url+" not working");
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -36,7 +37,7 @@ public class NetworkUtils {
 
     public static Document getResponseForSubject(String subject) {
         String url = BASE_URL+ subject;
-        //System.out.println(url);
+        //Logger.log(url);
         return getResponse(url);
     }
 }

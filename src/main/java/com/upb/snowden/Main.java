@@ -6,29 +6,37 @@ import com.upb.snowden.parsers.InputParse;
 import com.upb.snowden.parsers.WikiParseUtils;
 import com.upb.snowden.utils.CompariasonUtils;
 import com.upb.snowden.utils.FileOperation;
+import com.upb.snowden.utils.Logger;
 import com.upb.snowden.utils.NetworkUtils;
 import org.jsoup.nodes.Document;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.upb.snowden.Constants.TESTING_DATASET_OUTPUT_PATH_2020;
+import static com.upb.snowden.Constants.*;
 
 public class Main {
     public static void main(String[] args) {
+        //processTestData();
+
+        Logger.log(preprocessFact("1", "Bjørnstjerne Bjørnson's award is Nobel Prize in Literature.").toString());
+        //Logger.log(preprocessFact("2", "Pär Lagerkvist's foundation place is Nobel Prize in Literature.").toString());
+    }
+
+    private static void processTestData() {
         List<Fact> factsList = FileOperation.readTestFile(Constants.TESTING_DATASET_INPUT_PATH_2020);
 
         List<Fact> resultFact = new ArrayList<>();
         for (Fact fact: factsList) {
             Fact resultfact = preprocessFact(fact.getId(), fact.getFact());
-            System.out.println(resultfact.toString());
+            Logger.log(resultfact.toString());
             resultFact.add(resultfact);
 
         }
 
         FileOperation.writeFile(resultFact,TESTING_DATASET_OUTPUT_PATH_2020);
-        //System.out.println(preprocessFact("1", "Om Shanti Om stars Uma Thurman.").toString());
     }
+
 
     public static Fact preprocessFact(String id, String fact) {
         double result = 0.0;
@@ -38,7 +46,7 @@ public class Main {
             if (!triplet.getSubject().isEmpty()) {
                 List<String> alternativeUrls = WikiParseUtils.getAlternativeUrls(triplet.getSubject());
                 for (String url : alternativeUrls) {
-                    System.out.println(url);
+                    Logger.log(url);
                     Document document = NetworkUtils.getResponse(url);
                     List<String> infoboxrows = WikiParseUtils.getInfoboxrows(document);
                     if (!infoboxrows.isEmpty()) {

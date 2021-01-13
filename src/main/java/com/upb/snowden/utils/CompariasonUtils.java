@@ -7,7 +7,7 @@ public class CompariasonUtils {
 
     public static double checkPredicateObject(String id, String fact, Triplet triplet, String row){
         double result = 0.0;
-        //System.out.println(fact);
+        //Logger.log(fact);
         if (CompariasonUtils.isAlternatePredicatePresent(triplet, row)) {
             return CompariasonUtils.isObjectPresent(triplet,row) ? 1.0 : -1.0;
         } else if (CompariasonUtils.isPredicatePresent(triplet, row)) {

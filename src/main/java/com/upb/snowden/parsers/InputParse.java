@@ -2,6 +2,7 @@ package com.upb.snowden.parsers;
 
 import com.upb.snowden.Constants;
 import com.upb.snowden.models.Triplet;
+import com.upb.snowden.utils.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +13,7 @@ public class InputParse {
         //generate all Triplets
         //make this global variable List<Triplet> list
         List<Triplet> list = new ArrayList<>();
-        System.out.println("Noch nicht entwickelt");
+        Logger.log("Noch nicht entwickelt");
         return null;
     }
 

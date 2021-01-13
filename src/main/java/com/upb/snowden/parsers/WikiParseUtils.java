@@ -3,6 +3,7 @@ package com.upb.snowden.parsers;
 import com.upb.snowden.Constants;
 import com.upb.snowden.utils.NetworkUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -62,7 +63,7 @@ public class WikiParseUtils {
 //        String fact = "John Strutt";
 //        List<String> alternativeUrls = getAlternativeUrls(fact);
 //        for (String url: alternativeUrls) {
-//            System.out.println(url);
+//            Logger.log(url);
 //        }
 //
 //    }
@@ -75,9 +76,11 @@ public class WikiParseUtils {
 
     //construction of URLs
     public static List<String> getAlternativeUrls(String subject) {
+        subject = StringUtils.stripAccents(subject).replaceAll("ø","o");
         subject = subject.replaceAll(" ","%20");
         List<String> list = new ArrayList<>();
         try {
+
             String data = IOUtils.toString(URI.create(Constants.ALTERNATIVE_URLS + subject), StandardCharsets.UTF_8);
             JSONArray jsonarray = new JSONArray(data);
             JSONArray array = jsonarray.getJSONArray(3);
