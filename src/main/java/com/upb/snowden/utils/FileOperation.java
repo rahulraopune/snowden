@@ -11,7 +11,7 @@ import static com.upb.snowden.Constants.*;
 public class FileOperation {
 
     public static List<Fact> readTrainFile(String path) {
-        String contents = "";
+        String contents;
         List<Fact> list = new ArrayList<>();
         try {
             File f = new File(path);
@@ -33,7 +33,7 @@ public class FileOperation {
     }
 
     public static List<Fact> readTestFile(String path) {
-        String contents = "";
+        String contents;
         List<Fact> list = new ArrayList<>();
         try {
             File f = new File(path);
@@ -62,14 +62,14 @@ public class FileOperation {
             }
             int i = 1;
             if (file.exists()) {
-                String content = "";
+                StringBuilder content = new StringBuilder();
                 for (Fact f : results) {
                     String output_line = "<" + URI_FACT+ f.getId()+ ">" + URI_TRUTH_VAL + "\"" + f.getValue() + "\""+"^^" + DATA_TYPE + " .\n";
-                    content+=output_line;
+                    content.append(output_line);
                     i++;
                 }
                 BufferedWriter writer = new BufferedWriter(new FileWriter(path));
-                writer.write(content);
+                writer.write(content.toString());
                 writer.close();
             }
         } catch (IOException e) {

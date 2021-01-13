@@ -54,18 +54,8 @@ public class WikiParseUtils {
                 }
             }
         }
-
         return list;
     }
-
-//    public static void main(String[] args) {
-//        String fact = "John Strutt";
-//        List<String> alternativeUrls = getAlternativeUrls(fact);
-//        for (String url: alternativeUrls) {
-//            System.out.println(url);
-//        }
-//
-//    }
 
     //get wiki's infobox
     public static String getWebpage(Document document, boolean asText) {
