@@ -1,17 +1,15 @@
 package com.upb.snowden.utils;
 
-import com.upb.snowden.models.Fact;
 import com.upb.snowden.models.Triplet;
 
-public class CompariasonUtils {
+public class ComparisonsUtils {
 
-    public static double checkPredicateObject(String id, String fact, Triplet triplet, String row){
+    public static double checkPredicateObject(Triplet triplet, String row){
         double result = 0.0;
-        //System.out.println(fact);
-        if (CompariasonUtils.isAlternatePredicatePresent(triplet, row)) {
-            return CompariasonUtils.isObjectPresent(triplet,row) ? 1.0 : -1.0;
-        } else if (CompariasonUtils.isPredicatePresent(triplet, row)) {
-            return CompariasonUtils.isObjectPresent(triplet,row) ? 1.0 : -1.0;
+        if (ComparisonsUtils.isAlternatePredicatePresent(triplet, row)) {
+            return ComparisonsUtils.isObjectPresent(triplet,row) ? 1.0 : -1.0;
+        } else if (ComparisonsUtils.isPredicatePresent(triplet, row)) {
+            return ComparisonsUtils.isObjectPresent(triplet,row) ? 1.0 : -1.0;
         }
         return result;
     }
