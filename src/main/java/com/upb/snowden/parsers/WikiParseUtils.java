@@ -59,15 +59,6 @@ public class WikiParseUtils {
         return list;
     }
 
-//    public static void main(String[] args) {
-//        String fact = "John Strutt";
-//        List<String> alternativeUrls = getAlternativeUrls(fact);
-//        for (String url: alternativeUrls) {
-//            Logger.log(url);
-//        }
-//
-//    }
-
     //get wiki's infobox
     public static String getWebpage(Document document, boolean asText) {
         Element body = document.body();
@@ -80,7 +71,6 @@ public class WikiParseUtils {
         subject = subject.replaceAll(" ","%20");
         List<String> list = new ArrayList<>();
         try {
-
             String data = IOUtils.toString(URI.create(Constants.ALTERNATIVE_URLS + subject), StandardCharsets.UTF_8);
             JSONArray jsonarray = new JSONArray(data);
             JSONArray array = jsonarray.getJSONArray(3);

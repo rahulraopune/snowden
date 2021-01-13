@@ -4,7 +4,7 @@ import com.upb.snowden.models.Fact;
 import com.upb.snowden.models.Triplet;
 import com.upb.snowden.parsers.InputParse;
 import com.upb.snowden.parsers.WikiParseUtils;
-import com.upb.snowden.utils.CompariasonUtils;
+import com.upb.snowden.utils.ComparisonsUtils;
 import com.upb.snowden.utils.FileOperation;
 import com.upb.snowden.utils.Logger;
 import com.upb.snowden.utils.NetworkUtils;
@@ -25,15 +25,12 @@ public class Main {
 
     private static void processTestData() {
         List<Fact> factsList = FileOperation.readTestFile(Constants.TESTING_DATASET_INPUT_PATH_2020);
-
         List<Fact> resultFact = new ArrayList<>();
         for (Fact fact: factsList) {
             Fact resultfact = preprocessFact(fact.getId(), fact.getFact());
             Logger.log(resultfact.toString());
             resultFact.add(resultfact);
-
         }
-
         FileOperation.writeFile(resultFact,TESTING_DATASET_OUTPUT_PATH_2020);
     }
 
@@ -51,14 +48,14 @@ public class Main {
                     List<String> infoboxrows = WikiParseUtils.getInfoboxrows(document);
                     if (!infoboxrows.isEmpty()) {
                         for (String row : infoboxrows) {
-                            result = CompariasonUtils.checkPredicateObject(id, fact, triplet, row);
+                            result = ComparisonsUtils.checkPredicateObject(triplet, row);
                             if (result != 0.0)
                                 return new Fact(id, fact, result);
                         }
 
                         List<String> paragraphList = WikiParseUtils.fetchParagraph(document);
                         for (String paragraph: paragraphList) {
-                             result = CompariasonUtils.checkPredicateObject(id, fact, triplet, paragraph);
+                             result = ComparisonsUtils.checkPredicateObject(triplet, paragraph);
                             if (result != 0.0)
                                 return new Fact(id, fact, result);
                         }
