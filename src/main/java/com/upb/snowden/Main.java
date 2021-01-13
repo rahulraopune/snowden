@@ -17,10 +17,10 @@ import static com.upb.snowden.Constants.*;
 
 public class Main {
     public static void main(String[] args) {
-        //processTestData();
+        processTrainData();
+        processTestData();
 
-        Logger.log(preprocessFact("1", "Bjørnstjerne Bjørnson's award is Nobel Prize in Literature.").toString());
-        //Logger.log(preprocessFact("2", "Pär Lagerkvist's foundation place is Nobel Prize in Literature.").toString());
+        //Logger.log(preprocessFact("1","Johannes Stark's award is Nobel Prize in Literature.").toString());
     }
 
     private static void processTestData() {
@@ -32,6 +32,17 @@ public class Main {
             resultFact.add(resultfact);
         }
         FileOperation.writeFile(resultFact,TESTING_DATASET_OUTPUT_PATH_2020);
+    }
+
+    private static void processTrainData() {
+        List<Fact> factsList = FileOperation.readTestFile(Constants.TRAINING_DATASET_INPUT_PATH_2020);
+        List<Fact> resultFact = new ArrayList<>();
+        for (Fact fact: factsList) {
+            Fact resultfact = preprocessFact(fact.getId(), fact.getFact());
+            Logger.log(resultfact.toString());
+            resultFact.add(resultfact);
+        }
+        FileOperation.writeFile(resultFact,TRAINING_DATASET_OUTPUT_PATH_2020);
     }
 
 

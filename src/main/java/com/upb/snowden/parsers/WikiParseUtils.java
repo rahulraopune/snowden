@@ -67,7 +67,7 @@ public class WikiParseUtils {
 
     //construction of URLs
     public static List<String> getAlternativeUrls(String subject) {
-        subject = StringUtils.stripAccents(subject).replaceAll("ø","o");
+        subject = StringUtils.stripAccents(subject).replaceAll("ø","o").replaceAll("ł","l");
         subject = subject.replaceAll(" ","%20");
         List<String> list = new ArrayList<>();
         try {

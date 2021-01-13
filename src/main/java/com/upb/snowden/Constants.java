@@ -7,6 +7,9 @@ public class Constants {
     public static final String TESTING_DATASET_INPUT_PATH_2020 = "src/main/resources/SNLP2020_test.tsv";
     public static final String TESTING_DATASET_OUTPUT_PATH_2020 = "src/main/resources/SNLP2020_test_output.ttl";
 
+    public static final String TRAINING_DATASET_INPUT_PATH_2020 = "src/main/resources/SNLP2020_training.tsv";
+    public static final String TRAINING_DATASET_OUTPUT_PATH_2020 = "src/main/resources/SNLP2020_training_output.ttl";
+
     public static final String AWARD_IS = "award is";
     public static final String HONOUR = "honour";
     public static final String NASCENCE_PLACE = "nascence place";

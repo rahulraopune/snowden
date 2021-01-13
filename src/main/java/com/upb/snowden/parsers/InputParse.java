@@ -4,6 +4,10 @@ import com.upb.snowden.Constants;
 import com.upb.snowden.models.Triplet;
 import com.upb.snowden.utils.Logger;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class InputParse {
 
     public Triplet getTriplet(String sentence) {
@@ -23,8 +27,14 @@ public class InputParse {
         } else if (sentence.contains(Constants.SPOUSE_IS)) {
             triplet =  parseSOP(sentence, Constants.SPOUSE_IS, Constants.SPOUSE, false);
         } else if (sentence.contains(Constants.SUBSIDIARY)) {
-            Triplet temp = parseSOP(sentence, Constants.SUBSIDIARY_IS, Constants.SUBSIDIARY, false);
-            triplet =  exchangeSubjectObject(temp);
+            Triplet temp;
+            if(isLastWord(sentence, Constants.SUBSIDIARY)){
+                temp = parseSOP(sentence, Constants.SUBSIDIARY, Constants.SUBSIDIARY, true);
+                triplet = exchangeSubjectObject(temp);
+            }else {
+                temp = parseSOP(sentence, Constants.SUBSIDIARY_IS, Constants.SUBSIDIARY, false);
+                triplet = exchangeSubjectObject(temp);
+            }
             triplet.setAlternatePredicate(Constants.OWNER);
         } else if (sentence.contains(Constants.STARS)) {
             triplet = parseStarSOP(sentence, false);
@@ -59,21 +69,26 @@ public class InputParse {
     }
 
     public Triplet parseSOP(String sentence, String predicate, String wikiword, boolean inversionRequired){
-        if (inversionRequired){
-            int predicateIndex = sentence.indexOf(" " + Constants.IS);
-            String object = sentence.substring(0, predicateIndex);
-            String subject = sentence.substring(predicateIndex + (" " + Constants.IS).length());
-            subject = preprocessSentence(subject);
-            object = preprocessSentence(object);
-            return new Triplet(subject, wikiword, object);
-        }else {
-            int predicateIndex = sentence.indexOf(predicate);
-            String subject = sentence.substring(0, predicateIndex);
-            subject = preprocessSentence(subject);
-            String object;
-            object = sentence.substring(predicateIndex + predicate.length());
-            object = preprocessSentence(object);
-            return new Triplet(subject, wikiword, object);
+        try {
+            if (inversionRequired) {
+                int predicateIndex = sentence.indexOf(" " + Constants.IS);
+                String object = sentence.substring(0, predicateIndex);
+                String subject = sentence.substring(predicateIndex + (" " + Constants.IS).length());
+                subject = preprocessSentence(subject);
+                object = preprocessSentence(object);
+                return new Triplet(subject, wikiword, object);
+            } else {
+                int predicateIndex = sentence.indexOf(predicate);
+                String subject = sentence.substring(0, predicateIndex);
+                subject = preprocessSentence(subject);
+                String object;
+                object = sentence.substring(predicateIndex + predicate.length());
+                object = preprocessSentence(object);
+                return new Triplet(subject, wikiword, object);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            return new Triplet("","","");
         }
     }
 
@@ -114,5 +129,17 @@ public class InputParse {
         triplet.setSubject(triplet.getObject());
         triplet.setObject(subject);
         return triplet;
+    }
+
+    public static boolean isLastWord(String text, String word) {
+        String[] words = text.replaceAll("\\.","").split(" ");
+        List<String> strings = Arrays.asList(words.clone());
+        int index = strings.indexOf(word);
+        int lastWordindex = strings.size() - 1;
+        return index == lastWordindex;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isLastWord("Kiel is Johan Christian Fabricius' subsidiary.","subsidiary"));
     }
 }
