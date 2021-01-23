@@ -1,8 +1,14 @@
 # Snowden SNLP Project
 
-## Execution Procedure:
+## Execution Procedure for Eclipse IDE:
+- Open File > Open Projects from File System > choose the directory to import the project > Press Finish
+- Project will be loaded in Eclipse
+- Go to Window -> Preferences -> Expand General and click Workspace, text file encoding (near bottom) has an encoding chooser. Select "Other" radio button -> Select UTF-8 from the   drop down and Click Apply and OK button OR click simply OK button ![here](https://i.stack.imgur.com/YKGdS.png)
+- Go to `Main.java` class under `com.upb.snowden` package, run the file as Java application.
+- The output `SNLP2020_test_output.ttl` file will be generated in `src/main/resources` directory.
 
-- Load the project as a Maven Project in Eclipse/Intellij IDE.
+## Execution Procedure for Intellij IDE:
+- Load the project as a Maven Project in Intellij IDE.
 - Build project and Run `main` method in `Main.java`.
 - The output `SNLP2020_test_output.ttl` file will be generated in `/resources` directory.
 
