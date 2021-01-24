@@ -133,8 +133,4 @@ public class InputParse {
         int lastWordindex = strings.size() - 1;
         return index == lastWordindex;
     }
-
-    public static void main(String[] args) {
-        System.out.println(isLastWord("Kiel is Johan Christian Fabricius' subsidiary.","subsidiary"));
-    }
 }
